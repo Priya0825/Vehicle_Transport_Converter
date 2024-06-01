@@ -1,0 +1,392 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url('/images/BackImg.jpg');
+  background-size: cover;
+}
+h1{
+  font-family: 'Poppins',sans-serif;
+  color:rgba(255, 97, 62, 0.766);
+  font-size: 5rem;
+  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.155);
+  text-align: center;
+  width:100%;
+  padding-top: 10vh;
+}
+
+.Container{
+  /* background-color: blue; */
+  width: 100%;
+  height: 70vh;
+  gap: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Controls{
+  /* background-color: red; */
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius:10px;
+  background-color: rgba(67, 67, 67, 0.238);
+  /* gap: 5vh; */
+}
+.Results{
+  /* background-color: green; */
+  width: 50%;
+  height: 90%;
+}
+#profile{
+  width: 100%;
+  height: 50%;
+  background-color: rgba(133, 133, 133, 0.175);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+#profile img{
+  height: 60%;
+  border:none;
+  border-radius: 50%;
+  background-color: aqua;
+}
+.details{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  gap: 5px;
+}
+.details h3{
+  font-family: 'Poppins',sans-serif;
+  color:rgba(255, 97, 62, 0.766);
+  font-size: 2rem;
+  text-align: center;
+  width:100%;
+}
+.details p{
+  font-family: 'Poppins',sans-serif;
+  color:rgba(255, 255, 255, 0.766);
+  font-size: 14px;
+  text-align: left;
+  width:100%;
+}
+#calculations{
+  width: 80%;
+  height: 20%;
+  margin-top: 10vh;
+  padding: 30px 10%;
+  background-color: rgba(55, 55, 55, 0.429);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  gap: 5px;
+}
+#alertDis{
+  border: 1px solid red;
+  padding: 10px 10%;
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  color: red;
+  background-color: rgba(255, 80, 80, 0.166);
+  text-align: left;
+  width:80%;
+  text-align: center;
+  display: none;
+}
+#calculations p{
+  font-family: 'Poppins',sans-serif;
+  color:rgba(255, 255, 255, 0.766);
+  font-size: 14px;
+  text-align: left;
+  width:100%;
+}
+
+
+
+#dis{
+  width: 70%;
+  height: 5vh;
+  padding: 10px 5%;
+  background-color: #e6e6e6;
+  font-family: 'Roboto',sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+#cal{
+  width: 80%;
+  background-color: rgba(255, 97, 62, 0.766);
+  font-family: 'Roboto',sans-serif;
+  color: white;
+  padding: 15px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+}
+#comp{
+  width: 80%;
+  background-color: rgba(79, 79, 79, 0.41);
+  font-family: 'Roboto',sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 15px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+#cal:hover , #comp:hover{
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+
+.menu{
+  margin-top:10px ;
+  width: 70%;
+  height: 5vh;
+  padding: 10px 5%;
+  background-color: #e6e6e6ad;
+  font-family: 'Roboto',sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+#veh{
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dropdown-menu {
+  display: none;
+  position: relative;
+  background-color: #171717e8;
+  list-style: none;
+  transform: translate(-30px,10px);
+  padding: 0 7%;
+  height: 200px;
+  width: 100%;
+  overflow: auto;
+  z-index: 10;
+}
+
+.dropdown-item p{
+  padding: 12px 16px;
+  display: block;
+  color: white;
+}
+
+#compare{
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(53, 53, 53, 0.453);
+  display: none;
+}
+#head{
+  width: 100%;
+  height: 20%;
+  background-color: rgba(255, 97, 62, 0.766);
+}
+#others{
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+}
+#carHead{
+  width: 90%;
+  padding: 20px 5%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+#car{
+  width: 90%;
+  padding: 10px 5%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.name{
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name p{
+  font-family: 'Poppins',sans-serif;
+  color: white;
+  text-align: center;
+}
+.status{
+  width: 55%;
+  height: 100%;
+}
+.calc{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc p{
+   width: 50%;
+   text-align: left;
+   font-family: monospace;
+   color: white;
+}
+.overflow{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+}
+.overflow p{
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  color: rgb(255, 63, 63);
+}
+.overflowHead{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+}
+.overflowHead p{
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  color: rgb(205, 205, 205);
+}
+
+
+@media (max-width:1150px){
+  #dis,#veh,#cal,#comp{
+    font-size: 14px;
+  }
+  .dropdown-menu{
+    transform: translate(-20px,10px);
+  }
+}
+
+@media (max-width:950px){
+  .Container{
+    gap: 5%;
+  }
+  .Controls{
+    width: 40%;
+  }
+  #compare{
+    height: 40vh;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  .details h3{
+    font-size: 1.5rem;
+  }
+  .details p{
+    font-size: 14px;
+  }
+  .name p,.overflow p,.overflowHead p,.calc p{
+    font-size: 14px;
+  }
+}
+
+@media (max-width:700px){
+  .name p,.overflow p,.overflowHead p,.calc p{
+    font-size: 12px;
+  }
+  #compare{
+    height: 30vh;
+  }
+  h1{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 1.8rem;
+    padding-top: 5vh;
+  }
+  .Container{
+    flex-direction: column;
+    width: 100%;
+    height: 160vh;
+    gap: 5vh;
+  }
+  .Controls{
+    width: 90%;
+    height: 50vh;
+    margin-top: 20px;
+  }
+  #dis,#cal,#comp{
+    font-size: 14px;
+  }
+  #veh{
+    font-size: 14px;
+  }
+  
+  .dropdown-menu{
+    transform: translate(-15px,10px);
+  }
+  .Results{
+    width: 90%;    
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+    gap: 5vh;
+  }
+  #profile{
+    height: 70vh;
+    flex-direction: column-reverse;
+  }
+  #profile img{
+    height: 45%;
+  }
+  .details p{
+    text-align: center;
+  }
+  #calculations{
+    height: 30vh;
+  }
+  #compare{
+    font-size: 12px;
+    background-color: black;
+    z-index: 2;
+  }
+}
+@media (max-width:350px){
+  #dis,#veh,#cal,#comp{
+    font-size: 11px;
+  }
+  .name p,.overflow p,.overflowHead p,.calc p{
+    font-size: 12px;
+  }
+}

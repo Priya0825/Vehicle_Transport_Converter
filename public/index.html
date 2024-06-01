@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Vehicle Transport Converter</h1>
+    <div class="Container">
+      <div class="Controls">
+        <input
+          id="dis"
+          placeholder="Enter distance to be covered in km"
+          type="number"
+        />
+        <div class="menu">
+          <p
+            onclick="document.getElementById('drop-menu').style.display='block';"
+            id="veh"
+          >
+            Click here to choose a vehicle
+          </p>
+          <ul id="drop-menu" class="dropdown-menu">
+            <li class="dropdown-item" onclick="vehicleSelected(0)">
+              <p>Maruti Suzuki Alto</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(1)">
+              <p>Hyundai i20</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(2)">
+              <p>Tata Nexon</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(3)">
+              <p>Honda City</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(4)">
+              <p>Mahindra Thar</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(5)">
+              <p>Toyota Innova Crysta</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(6)">
+              <p>Kia Seltos</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(7)">
+              <p>Renault Kwid</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(8)">
+              <p>Ford EcoSport</p>
+            </li>
+            <li class="dropdown-item" onclick="vehicleSelected(9)">
+              <p>Tata Tiago</p>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="calculate()" id="cal">Calculate</button>
+        <button onclick="showComparison()" id="comp">Compare with All</button>
+      </div>
+      <div class="Results">
+        <div id="profile">
+          <img id="carImg" src="" />
+          <div class="details">
+            <h3 id="carName"></h3>
+            <p id="carSpeed"></p>
+            <p id="carEff"></p>
+            <p id="carTank"></p>
+            <p id="carRange"></p>
+          </div>
+        </div>
+        <div id="calculations">
+          <label id="alertDis">Distance greater than Max Range</label>
+          <p id="disCal"></p>
+          <p id="timeCal"></p>
+          <p id="fuelCal"></p>
+        </div>
+        <div id="compare">
+          <div id="head">
+          </div>
+          <div id="others">           
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
